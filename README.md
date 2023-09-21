@@ -11,3 +11,6 @@ At the start of the program, it takes in the JSON from the database "users.json"
 
 ## DELETE REQUESTS (DELETES USER/S)
 At the start of the program, it takes in the JSON from the database "users.json". It uses a dynamic URI to know the ID of the object we want to delete and then we find it in the users JSON. We then use the splice function to actually rid of it from the users JSON and then use FS to write the new JSON to the "users.json" database.
+
+### DOCKER
+**PLEASE** use the Docker Image on the Docker Hub to run this code. It's much more stable that way. You can see the Dockerfile and .dockerignore and it's also on the Docker Hub. Thank you!
