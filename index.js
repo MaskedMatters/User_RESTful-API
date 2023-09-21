@@ -1,12 +1,12 @@
 // Libraries
-const express = require('express');    // Library that handles the server endpoints
-const fs = require('fs');              // Library that handles READ/WRITE to files
+const express = require('express');        // Library that handles the server endpoints
+const fs = require('fs');                  // Library that handles READ/WRITE to files
 
 // Config
-const app = express();                 // Library constant set to app
-app.use( express.json() );             // All GET requests get parsed with JSON
+const app = express();                     // Library constant set to app
+app.use( express.json() );                 // All GET requests get parsed with JSON
 
-const PORT = 3000;                     // Port that will host the web app
+const PORT = process.env.PORT || 3000;     // Port that will host the web app
 
 // --------------------------------------------------------------------
 // USER INSTANTIATION **VERY IMPORTANT** (LITERALLY NOT JOKING) A joke
@@ -14,7 +14,7 @@ const PORT = 3000;                     // Port that will host the web app
 let users = require('./users.json'); // <------------
 
 // Server Endpoints
-app.get('/lsit/all', (req, res) => {
+app.get('/list/all', (req, res) => {
     res.status(200).json(users);
 });
 
